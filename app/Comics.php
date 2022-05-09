@@ -8,16 +8,12 @@ class Comics extends Model
 {
     //
     protected $fillable = [
-        'name',
-        'poster',
-        'series',
-        'price',
+        'title',
         'description',
+        'thumb',
+        'price',
+        'series',
         'sale_date',
-        'volume',
-        'page_count',
-        'rated',
-        'updated_at',
-        'created_at',
+        'type'
     ];
 }

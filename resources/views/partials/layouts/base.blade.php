@@ -8,8 +8,8 @@
     <link rel="stylesheet" href="css/app.css">
 </head>
 <body>
-    @yield('header')
+    @include('header')
     @yield('content')
-    @yield('footer')
+    @include('footer')
 </body>
 </html>
