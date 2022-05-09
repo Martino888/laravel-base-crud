@@ -2,10 +2,10 @@
 
 namespace App\Http\Controllers;
 
-use App\Comics;
+use App\Comic;
 use Illuminate\Http\Request;
 
-class ComicsController extends Controller
+class ComicController extends Controller
 {
     /**
      * Display a listing of the resource.
@@ -15,8 +15,8 @@ class ComicsController extends Controller
     public function index()
     {
         //
-        $comics = Comics::paginate(3);
-        return views('comics.index', compact('comics'));
+        $comics = Comic::paginate(3);
+        return view('comics.index', compact('comics'));
     }
 
     /**
@@ -43,21 +43,20 @@ class ComicsController extends Controller
     /**
      * Display the specified resource.
      *
-     * @param  \App\Comics  $comics
+     * @param  \App\Comic  $comics
      * @return \Illuminate\Http\Response
      */
-    public function show(Comics $comics)
-    {
-        //
+    public function show(Comic $comic){
+        return view('comics.show', compact('comic'));
     }
 
     /**
      * Show the form for editing the specified resource.
      *
-     * @param  \App\Comics  $comics
+     * @param  \App\Comic  $comics
      * @return \Illuminate\Http\Response
      */
-    public function edit(Comics $comics)
+    public function edit(Comic $comics)
     {
         //
     }
@@ -66,10 +65,10 @@ class ComicsController extends Controller
      * Update the specified resource in storage.
      *
      * @param  \Illuminate\Http\Request  $request
-     * @param  \App\Comics  $comics
+     * @param  \App\Comic  $comics
      * @return \Illuminate\Http\Response
      */
-    public function update(Request $request, Comics $comics)
+    public function update(Request $request, Comic $comics)
     {
         //
     }
@@ -77,10 +76,10 @@ class ComicsController extends Controller
     /**
      * Remove the specified resource from storage.
      *
-     * @param  \App\Comics  $comics
+     * @param  \App\Comic  $comics
      * @return \Illuminate\Http\Response
      */
-    public function destroy(Comics $comics)
+    public function destroy(Comic $comics)
     {
         //
     }

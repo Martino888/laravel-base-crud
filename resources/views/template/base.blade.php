@@ -4,12 +4,12 @@
     <meta charset="UTF-8">
     <meta name="viewport" content="width=device-width, initial-scale=1.0">
     <meta http-equiv="X-UA-Compatible" content="ie=edge">
-    <title>@yield('documentTitle')</title>
-    <link rel="stylesheet" href="css/app.css">
+    <title>@yield('pageTitle')</title>
+    <link rel="stylesheet" href="{{asset('css/app.css')}}">
 </head>
 <body>
-    @include('header')
-    @yield('content')
-    @include('footer')
+    @include('partials.header')
+    @yield('contentMain')
+    @include('partials.footer')
 </body>
 </html>
